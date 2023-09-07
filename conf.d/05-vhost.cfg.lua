@@ -20,10 +20,14 @@ https_ssl = {
 }
 
 VirtualHost (domain)
+disco_items = {
+    { domain_http_upload },
+}
 
 -- Set up a http file upload because proxy65 is not working in muc
 Component (domain_http_upload) "http_upload"
 	http_upload_expire_after = 60 * 60 * 24 * 7 -- a week in seconds
+	http_upload_file_size_limit = os.getenv("HTTP_UPLOAD_FILE_SIZE_LIMIT") or 1024 * 1024 -- Default is 1MB
 
 Component (domain_muc) "muc"
 	name = "Prosody Chatrooms"

@@ -2,7 +2,18 @@
 
 ## Unreleased
 
-* Update to debian bookworm
+## v1.2.10
+
+* Update docker base image to debian bookworm
+* [Add LDAP authentication support](https://github.com/SaraSmiseth/prosody/pull/50)
+* Add environment variable HTTP_MAX_CONTENT_SIZE for setting http_max_content_size.
+* Add environment variable HTTP_UPLOAD_FILE_SIZE_LIMIT for setting http_upload_file_size_limit.
+* Add domain_http_upload to disco_items to support http_upload on some clients and if http_upload is not a subdomain.
+
+## v1.2.9
+
+* Update prosody to version 0.12.3
+* Update luarocks to version 3.9.2
 
 ## v1.2.8
 
