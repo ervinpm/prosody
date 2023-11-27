@@ -3,7 +3,7 @@
 
 local stringy = require "stringy" 
 
-admins = stringy.split(os.getenv("PROSODY_ADMINS"), ", ");
+admins = stringy.split(os.getenv("PROSODY_ADMINS") or "", ", ");
 
 pidfile = "/var/run/prosody/prosody.pid"
 
